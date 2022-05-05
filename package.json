@@ -30,6 +30,7 @@
     "@web/dev-server": "^0.1.28",
     "@web/dev-server-storybook": "next",
     "@web/test-runner": "^0.13.27",
+    "@web/test-runner-playwright": "^0.8.8",
     "eslint": "^8.7.0",
     "eslint-config-prettier": "^8.3.0",
     "husky": "^4.3.8",
