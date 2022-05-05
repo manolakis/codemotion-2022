@@ -1,0 +1,61 @@
+{
+  "name": "codemotion-2022",
+  "description": "Codemotion-2022 presentation, following open-wc recommendations",
+  "license": "MIT",
+  "author": "Manuel Martin <manuel.martin@gmail.com>",
+  "version": "0.0.0",
+  "main": "index.js",
+  "module": "index.js",
+  "scripts": {
+    "start": "web-dev-server",
+    "lint": "eslint --ext .js,.html . --ignore-path .gitignore && prettier \"**/*.js\" --check --ignore-path .gitignore",
+    "format": "eslint --ext .js,.html . --fix --ignore-path .gitignore && prettier \"**/*.js\" --write --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "@lion/core": "^0.22.0",
+    "@lion/fieldset": "^0.21.0",
+    "@lion/form": "^0.14.0",
+    "@lion/form-core": "^0.17.0",
+    "@lion/input": "^0.17.0",
+    "@lion/localize": "^0.24.0",
+    "@lion/select": "^0.16.0",
+    "@lion/validate-messages": "^0.9.0",
+    "@open-wc/scoped-elements": "^2.1.1",
+    "lit": "^2.0.2"
+  },
+  "devDependencies": {
+    "@open-wc/eslint-config": "^4.3.0",
+    "@web/dev-server": "^0.1.28",
+    "@web/dev-server-storybook": "next",
+    "eslint": "^8.7.0",
+    "eslint-config-prettier": "^8.3.0",
+    "husky": "^4.3.8",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.4.1"
+  },
+  "customElements": "custom-elements.json",
+  "eslintConfig": {
+    "extends": [
+      "@open-wc",
+      "prettier"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2022
+    }
+  },
+  "prettier": {
+    "singleQuote": true,
+    "arrowParens": "avoid"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  }
+}
