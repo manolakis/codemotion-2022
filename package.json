@@ -7,6 +7,7 @@
   "main": "index.js",
   "module": "index.js",
   "scripts": {
+    "analyze": "cem analyze --litelement --exclude dist,coverage",
     "start": "web-dev-server",
     "lint": "eslint --ext .js,.html . --ignore-path .gitignore && prettier \"**/*.js\" --check --ignore-path .gitignore",
     "format": "eslint --ext .js,.html . --fix --ignore-path .gitignore && prettier \"**/*.js\" --write --ignore-path .gitignore",
@@ -25,6 +26,7 @@
     "lit": "^2.0.2"
   },
   "devDependencies": {
+    "@custom-elements-manifest/analyzer": "^0.5.7",
     "@open-wc/eslint-config": "^4.3.0",
     "@open-wc/testing": "^3.1.4",
     "@web/dev-server": "^0.1.28",
