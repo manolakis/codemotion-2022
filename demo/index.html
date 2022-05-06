@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>CodeMotion 2022 demo!</title>
+</head>
+<body>
+  <h1>CodeMotion 2022 demo!</h1>
+
+  <div id='demo'></div>
+
+  <script type='module'>
+    import { html, render} from 'lit';
+    import '../src/card-input.js';
+
+    render(
+      html`<card-input label='Número de tarjeta'></card-input>`,
+      document.querySelector('#demo'),
+    );
+  </script>
+</body>
+</html>
