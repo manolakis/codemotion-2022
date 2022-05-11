@@ -2,7 +2,7 @@ import { html } from 'lit';
 import '../../card-input.js';
 
 export default {
-  title: 'CardInput',
+  title: 'Components/CardInput',
   component: 'card-input',
   argTypes: {
     label: {
