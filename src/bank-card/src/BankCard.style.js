@@ -8,7 +8,9 @@ export const style = css`
     position: relative;
     font-size: 16px;
     line-height: 18px;
-    font-family: sans-serif;
+    font-family: monospace, sans-serif;
+    text-transform: uppercase;
+    color: #fff;
   }
 
   .card {
@@ -18,7 +20,7 @@ export const style = css`
 
   .front-side,
   .back-side {
-    /*transition: all ease-out 500ms;*/
+    transition: all ease-out 500ms;
     box-sizing: border-box;
     padding: 20px;
     width: 300px;
@@ -58,9 +60,8 @@ export const style = css`
 
   .switch-button {
     border: 0;
-    /*transition: color ease-out 500ms,*/
-    /*    background-color ease-out 500ms,*/
-    /*    opacity ease-out 500ms;*/
+    transition: color ease-out 500ms, background-color ease-out 500ms,
+      opacity ease-out 500ms;
     background-color: transparent;
     display: flex;
     border-radius: 8px;
@@ -227,6 +228,14 @@ export const style = css`
     :host([opened]) .back-side {
       top: 10px;
       left: 100px;
+    }
+  }
+
+  @media (prefers-reduced-motion) {
+    .switch-button,
+    .front-side,
+    .back-side {
+      transition: initial;
     }
   }
 `;

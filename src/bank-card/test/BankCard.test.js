@@ -1,6 +1,11 @@
 import { css, html } from 'lit';
 import { fixture, expect, elementUpdated } from '@open-wc/testing';
-import { setViewport, sendMouse, resetMouse } from '@web/test-runner-commands';
+import {
+  setViewport,
+  sendMouse,
+  resetMouse,
+  emulateMedia,
+} from '@web/test-runner-commands';
 import { visualDiff } from '@web/test-runner-visual-regression';
 
 import {
@@ -34,7 +39,11 @@ const template = () => html`
 
 describe('BankCard', () => {
   afterEach(() =>
-    Promise.all([setViewport({ width: 640, height: 800 }), resetMouse()])
+    Promise.all([
+      setViewport({ width: 640, height: 800 }),
+      resetMouse(),
+      emulateMedia({ reducedMotion: 'reduce' }),
+    ])
   );
 
   it(`masked should be accessible`, async () => {
