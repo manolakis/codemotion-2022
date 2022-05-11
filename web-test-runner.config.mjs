@@ -1,4 +1,6 @@
+import { visualRegressionPlugin } from '@web/test-runner-visual-regression/plugin';
 import { playwrightLauncher } from '@web/test-runner-playwright';
+import { testRunnerHtml } from './testRunnerHtml.mjs';
 
 export default {
   /** test files to run */
@@ -11,6 +13,14 @@ export default {
   browsers: [
     playwrightLauncher({ product: 'chromium' }),
     playwrightLauncher({ product: 'firefox' }),
-    playwrightLauncher({ product: 'webkit' }),
+    playwrightLauncher({ product: 'webkit' })
   ],
+
+  plugins: [
+    visualRegressionPlugin({
+      update: process.argv.includes('--update-visual-baseline'),
+    }),
+  ],
+
+  testRunnerHtml
 };

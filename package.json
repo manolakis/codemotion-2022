@@ -15,7 +15,9 @@
     "storybook": "web-dev-server -c .storybook/config.mjs"
   },
   "dependencies": {
+    "@lion/button": "^0.17.0",
     "@lion/core": "^0.22.0",
+    "@lion/icon": "^0.15.0",
     "@lion/input": "^0.17.0",
     "@lion/localize": "^0.24.0",
     "@lion/validate-messages": "^0.9.0",
@@ -31,7 +33,10 @@
     "@web/dev-server": "^0.1.28",
     "@web/dev-server-storybook": "^0.5.0",
     "@web/test-runner": "^0.13.27",
+    "@web/test-runner-commands": "^0.6.1",
     "@web/test-runner-playwright": "^0.8.8",
+    "@web/test-runner-visual-regression": "^0.6.5",
+    "@webcomponents/scoped-custom-element-registry": "^0.0.5",
     "eslint": "^8.7.0",
     "eslint-config-prettier": "^8.3.0",
     "husky": "^4.3.8",
